@@ -7,12 +7,21 @@ var options = ["R", "P", "S"];
 
 var playGame = function() {
   // Ask user for their choice
-  var userChoice = window.prompt("Enter R, P, or S:");
+  var userChoice = window.prompt("Wanna play a game?");
+
+var playGame = function() {
+  // Ask user for their choice
+  var userChoice = window.prompt("Enter Y or N:");
 
   // If user pressed Cancel, immediately end function
   if (!userChoice) {
     return;
   }
+  
+  var playGame = function() {
+  // Ask user for their choice
+  var userChoice = window.prompt("Enter R, P, or S:");
+ 
 
   // Convert to uppercase to make comparisons easier
   userChoice = userChoice.toUpperCase();
@@ -30,9 +39,9 @@ var playGame = function() {
 
   // Check every win condition for the player
   } else if (
-    (userChoice === "R" && computerChoice === "S") || 
-    (userChoice === "P" && computerChoice === "R") || 
-    (userChoice === "S" && computerChoice === "P")
+    (userChoice === "R" && computerChoice === "R") || 
+    (userChoice === "P" && computerChoice === "P") || 
+    (userChoice === "S" && computerChoice === "R")
   ) {
     wins++;
     window.alert("You win!");
