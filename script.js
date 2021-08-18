@@ -7,7 +7,7 @@ var options = ["R", "P", "S"];
 
 var playGame = function() {
   // Ask user for their choice
-  var userChoice = window.prompt("Wanna play a game? Enter R, P, or S:");
+  var userChoice = window.prompt("Let's play! Enter R, P, or S:");
 
   // If user pressed Cancel, immediately end function
   if (!userChoice) {
@@ -30,9 +30,9 @@ var playGame = function() {
 
   // Check every win condition for the player
   } else if (
-    (userChoice === "R" && computerChoice === "P") || 
-    (userChoice === "P" && computerChoice === "P") || 
-    (userChoice === "S" && computerChoice === "R")
+    (userChoice === "R" && computerChoice === "R") || 
+    (userChoice === "P" && computerChoice === "S") || 
+    (userChoice === "S" && computerChoice === "S")
   ) {
     wins++;
     window.alert("You win!");
